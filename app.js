@@ -45,7 +45,7 @@ app.post('/', function (req, res) {
         headers: {
             "Authorization": "omar1 64a7b6e7a6b09605da9887e6e47ac906-us20"
         },
-        //body: jasonData
+        body: jasonData
     };
 
     request(options, function (error, response, body) {
@@ -75,12 +75,8 @@ app.post("/failure", function (req, res) {
 });
 
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server is running  on port 3000 ...");
 });
 
-// API Key
-// 64a7b6e7a6b09605da9887e6e47ac906-us20
 
-//ID number
-// 8c3bb6ac42
